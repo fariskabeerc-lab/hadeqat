@@ -83,7 +83,7 @@ with tab1:
     fig_sales, top_sales = plot_top(item_summary, "Total Sales", "Top 30 Items by Sales", "Blues")
     st.plotly_chart(fig_sales, use_container_width=True)
     st.markdown("#### 🔎 Insights")
-    st.write(f"- 🏆 **{top_sales.iloc[0]['Items']}** is the highest revenue item with **{top_sales.iloc[0]['Total Sales']:,.0f}** sales.")
+    st.write(f"- 🏆 **{top_sales.iloc[0]['Items']}** is the highest with **{top_sales.iloc[0]['Total Sales']:,.0f}** sales.")
     st.write(f"- Top 5 items contribute **{top_sales['Total Sales'].head(5).sum()/total_sales:.1%}** of overall sales.")
     st.markdown("#### 📄 Dataset")
     st.dataframe(top_sales[["Item Code", "Items", "Qty Sold", "Total Sales", "Total Profit", "GP%"]])
